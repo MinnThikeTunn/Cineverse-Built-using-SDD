@@ -1,0 +1,503 @@
+/* Layout */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Role Switcher */
+.role-switcher {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.role-switcher select {
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #2a2a3e;
+  color: #fff;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Movie Card */
+.movie-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card-link {
+  display: block;
+  color: inherit;
+}
+
+.movie-card-poster {
+  aspect-ratio: 2/3;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-card-placeholder {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #999;
+}
+
+.movie-card-info {
+  padding: 0.75rem;
+}
+
+.movie-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card-rating {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.movie-card-actions {
+  padding: 0 0.75rem 0.75rem;
+}
+
+/* Search & Filter */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-bar select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* Sections */
+.trending-section,
+.catalog-section {
+  margin-bottom: 2.5rem;
+}
+
+.trending-section h2,
+.catalog-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+/* Movie Detail */
+.movie-detail {
+  max-width: 800px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: #1a1a2e;
+}
+
+.movie-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.movie-detail-header h1 {
+  font-size: 2rem;
+}
+
+.movie-genre-badge {
+  background: #e8e8ff;
+  color: #4a4aff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.movie-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.movie-avg-rating {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.movie-description {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+/* Reviews */
+.movie-reviews-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-author {
+  font-weight: 600;
+}
+
+.review-rating {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.review-delete {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+.review-delete:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.review-text {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.review-list-empty {
+  color: #999;
+  font-style: italic;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Review Form */
+.review-form {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.review-form h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.review-form-row {
+  margin-bottom: 0.75rem;
+}
+
+.review-form-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.review-form-row select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.review-error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+  background: #4a4aff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #3a3add;
+}
+
+/* Watchlist Toggle */
+.watchlist-toggle {
+  background: none;
+  border: 1px solid #4a4aff;
+  color: #4a4aff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.watchlist-toggle:hover {
+  background: #4a4aff;
+  color: #fff;
+}
+
+.watchlist-toggle.in-watchlist {
+  background: #4a4aff;
+  color: #fff;
+}
+
+.watchlist-toggle.in-watchlist:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Admin Panel */
+.admin-panel h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-section {
+  margin-bottom: 2rem;
+}
+
+.admin-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+.admin-form.inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-actions button,
+.admin-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-actions button[type="submit"],
+.admin-form button[type="submit"] {
+  background: #4a4aff;
+  color: #fff;
+}
+
+.form-actions button[type="button"] {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.admin-list-item div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-list-item button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.admin-list-item button:hover {
+  background: #f3f4f6;
+}
+
+.admin-list-item input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.empty-state h2 {
+  margin-bottom: 0.5rem;
+}
+
+.empty-state a {
+  color: #4a4aff;
+}
